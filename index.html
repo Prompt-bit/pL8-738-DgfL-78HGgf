@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt Dashboard</title>
+<style>
+  body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: "Segoe UI", sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+  h1 {
+    font-size: 3em;
+    letter-spacing: 1px;
+  }
+  p {
+    color: #ccc;
+  }
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+    width: 80%;
+    max-width: 500px;
+  }
+  button {
+    background: #0078d4;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1em;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #005a9e;
+    transform: scale(1.05);
+  }
+  footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.8em;
+    color: #888;
+  }
+</style>
+</head>
+<body>
+  <h1>⚙️ Prompt's Dashboard</h1>
+  <p>Welcome back, Prompt! Tap a button to open your favorite tools 🚀</p>
+  
+  <div class="button-grid">
+    <button onclick="openApp('https://www.github.com')">GitHub</button>
+    <button onclick="openApp('https://scratch.mit.edu')">Scratch</button>
+    <button onclick="openApp('https://chat.openai.com')">ChatGPT</button>
+    <button onclick="openApp('https://www.youtube.com')">YouTube</button>
+  </div>
+
+<script>
+function openApp(url) {
+  window.open(url, '_blank');
+}
+</script>
+</body>
+</html>
